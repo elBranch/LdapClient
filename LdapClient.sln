@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LdapClient", "LdapClient.csproj", "{EE813C0A-E7C8-45E7-B52D-5BCB8DFA6107}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EE813C0A-E7C8-45E7-B52D-5BCB8DFA6107}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE813C0A-E7C8-45E7-B52D-5BCB8DFA6107}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE813C0A-E7C8-45E7-B52D-5BCB8DFA6107}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE813C0A-E7C8-45E7-B52D-5BCB8DFA6107}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
