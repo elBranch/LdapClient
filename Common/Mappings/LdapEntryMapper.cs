@@ -58,7 +58,7 @@ internal static class LdapEntryMapper<TEntity>
                 {
                     if (values.Current is null) continue;
                     var value = ParsePrimitive(type, values.Current);
-                    if (value is not null) ((IList) list).Add(value);
+                    if (value is not null) ((IList)list).Add(value);
                 }
 
                 property.SetValue(instance, list);

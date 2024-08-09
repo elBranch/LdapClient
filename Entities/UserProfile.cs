@@ -99,7 +99,7 @@ public record UserProfile
     ///     Flags that control the behavior of the user account.
     /// </summary>
     [LdapAttribute("userAccountControl")]
-    private int UserAccountControl { get; init; }
+    private int UserAccountControl { get; }
 
     /// <summary>
     ///     The date when this object was changed.
@@ -116,5 +116,5 @@ public record UserProfile
     /// <summary>
     ///     Computed value to determine if the account is enabled based on User Account Control
     /// </summary>
-    public bool IsEnabled => !Convert.ToBoolean(UserAccountControl & (int) UserFlag.ADS_UF_ACCOUNTDISABLE);
+    public bool IsEnabled => !Convert.ToBoolean(UserAccountControl & (int)UserFlag.ADS_UF_ACCOUNTDISABLE);
 }
