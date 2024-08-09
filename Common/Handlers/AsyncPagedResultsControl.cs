@@ -15,7 +15,9 @@ public class AsyncPagedResultsControl : LdapControl
     private const string RequestOid = "1.2.840.113556.1.4.319";
     private const string DecodedNotInteger = "Decoded value is not an integer, but should be";
     private const string DecodedNotOctetString = "Decoded value is not an octet string, but should be";
-    private const string DecodedNotSequence = $"Failed to construct {nameof(AsyncPagedResultsControl)}: provided values might not be decoded as {nameof(Asn1Sequence)}";
+
+    private const string DecodedNotSequence =
+        $"Failed to construct {nameof(AsyncPagedResultsControl)}: provided values might not be decoded as {nameof(Asn1Sequence)}";
 
 
     static AsyncPagedResultsControl()

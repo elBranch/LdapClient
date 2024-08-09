@@ -1,6 +1,4 @@
-﻿using LdapClient.Common.Helpers;
-
-namespace LdapClient.SearchParameters;
+﻿namespace LdapClient.SearchParameters;
 
 /// <summary>
 ///     Parse a LDAP ambiguous name

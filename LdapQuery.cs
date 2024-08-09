@@ -1,6 +1,7 @@
 ﻿using LdapClient.Configuration;
 using LdapClient.Repositories;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 
 namespace LdapClient;
 
@@ -9,14 +10,14 @@ namespace LdapClient;
 /// </summary>
 /// <param name="settings">Platform configuration</param>
 /// <param name="loggerFactory">ILoggerFactory compatible logger</param>
-public sealed class LdapQuery(LdapSettings settings, ILoggerFactory loggerFactory) : IDisposable
+public sealed class LdapQuery(IOptions<LdapSettings> settings, ILoggerFactory loggerFactory) : IDisposable
 {
     private LdapUsers? _users;
 
     /// <summary>
     ///     Users repository
     /// </summary>
-    public LdapUsers Users => _users ??= new LdapUsers(settings, loggerFactory);
+    public LdapUsers Users => _users ??= new LdapUsers(settings.Value, loggerFactory);
 
     /// <summary>
     ///     Dispose LDAP connection if necessary
